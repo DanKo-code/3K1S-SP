@@ -1,0 +1,27 @@
+	runas /user:HTUser01 cmd
+
+	d:
+	cd D:/3k1s/MyLabs/SP/LAB_6SP_FIX/LAB_14/x64/Debug
+
+--Create
+	OS14_CREATE.exe 2000 3 4 4 HT TEST.ht
+--Start
+	OS14_START.exe D:/3k1s/MyLabs/SP/LAB_6SP_FIX/LAB_14/x64/Debug/TEST.ht HTUser01 9900
+--Stop
+	OS14_STOP.exe
+--Insert
+	OS_0402.exe D:/3k1s/MyLabs/SP/LAB_6SP_FIX/LAB_14/x64/Debug/TEST.ht HTUser01 9900
+--Delete
+	OS_0403.exe D:/3k1s/MyLabs/SP/LAB_6SP_FIX/LAB_14/x64/Debug/TEST.ht HTUser01 9900
+--Update
+	OS_0404.exe D:/3k1s/MyLabs/SP/LAB_6SP_FIX/LAB_14/x64/Debug/TEST.ht HTUser01 9900
+
+NetLocalGroupEnum
+
+NetUserGetLocalGroups
+
+GetUserName
+
+LogonUserW
+
+NetApiBufferFree
